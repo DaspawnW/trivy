@@ -24,7 +24,7 @@ require (
 	github.com/aquasecurity/testdocker v0.0.0-20230111101738-e741bda259da
 	github.com/aquasecurity/tml v0.6.1
 	github.com/aquasecurity/trivy-db v0.0.0-20230515061101-378ab9ed302c
-	github.com/aquasecurity/trivy-java-db v0.0.0-20230209231723-7cddb1406728
+	github.com/aquasecurity/trivy-java-db v0.0.0-20230514115002-fb1b70d903ce
 	github.com/aquasecurity/trivy-kubernetes v0.5.4
 	github.com/aws/aws-sdk-go v1.44.245
 	github.com/aws/aws-sdk-go-v2 v1.18.0
@@ -35,6 +35,7 @@ require (
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/cheggaaa/pb/v3 v3.1.2
 	github.com/containerd/containerd v1.7.0
+	github.com/daspawnw/trivy-java-db-server v0.0.0-20230608204330-7906b449106c
 	github.com/docker/docker v23.0.5+incompatible
 	github.com/docker/go-connections v0.4.0
 	github.com/fatih/color v1.14.1
@@ -78,7 +79,7 @@ require (
 	github.com/saracen/walker v0.1.3
 	github.com/secure-systems-lab/go-securesystemslib v0.6.0
 	github.com/sigstore/rekor v1.2.1
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.3
 	github.com/sosedoff/gitkit v0.3.0
 	github.com/spdx/tools-golang v0.5.0
 	github.com/spf13/cast v1.5.1
