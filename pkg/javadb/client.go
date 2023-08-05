@@ -1,11 +1,12 @@
 package javadb
 
 import (
+	"crypto/tls"
 	"errors"
 	"fmt"
 	"golang.org/x/xerrors"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
+	"google.golang.org/grpc/credentials"
 	"os"
 	"path/filepath"
 	"sort"
@@ -61,8 +62,11 @@ func NewClient() (*DB, error) {
 		return nil, errors.New("No JAVA_DATABASE_ADDR environment variable provided")
 	}
 
+	config := &tls.Config{
+		InsecureSkipVerify: false,
+	}
 	var opts []grpc.DialOption
-	opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	opts = append(opts, grpc.WithTransportCredentials(credentials.NewTLS(config)))
 
 	client, err := clientpb.NewJavaDBClient(addr, opts)
 	if err != nil {
